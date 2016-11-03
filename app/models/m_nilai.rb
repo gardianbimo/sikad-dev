@@ -1,0 +1,2 @@
+class MNilai < ApplicationRecord
+end

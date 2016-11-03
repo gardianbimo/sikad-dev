@@ -1,0 +1,26 @@
+<div class="col-md-10 col-md-offset-1">
+
+  <h2><%= @prodi.nama_prodi %></h2>
+  <hr>
+  <p>ID Prodi : <%= @prodi.id_prodi %></p>
+  <br>
+  <p>Jurusan : <%= @prodi.m_jurusan.nama_jurusan %></p>
+  <br>
+  <p>Email : <%= @prodi.email_prodi %></p>
+  <br>
+  <p>Telepon Jurusan : <%= @prodi.telp_prodi %></p>
+  <br>
+  <p>Situs Jurusan : <%= @prodi.situs_prodi %></p>
+  <br>
+  <p>Tanggal berdiri : <%= @prodi.tanggal_berdiri.to_date.to_s %></p>
+  <br>
+  <p>SK Berdiri : <%= @prodi.sk_berdiri %></p>
+  <hr>
+  <div class="col-md-4 col-md-offset-4">
+    <center>
+      <%= link_to "Back", m_prodis_path %>
+      <%= link_to "Edit", edit_m_prodi_path(@prodi) %>
+      <%= link_to "Delete", m_prodi_path(@prodi), method: :delete, data: {confirm: "Are you sure ?"} %>
+    </center>
+  </div>
+</div>

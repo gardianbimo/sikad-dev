@@ -1,0 +1,10 @@
+
+<%= simple_form_for @nilai do |f| %>
+    <%= f.input :nilai_huruf, label: 'Nilai' %>
+    <%= f.input :skala %>
+    <%= f.input :bobot %>
+    <center>
+      <%= f.submit 'Submit', class: 'btn btn-primary'%>
+      <%= button_tag "Reset", type: :reset, class: 'btn btn-danger' %>
+    </center>
+<% end %>

@@ -1,0 +1,2 @@
+module MNilaisHelper
+end

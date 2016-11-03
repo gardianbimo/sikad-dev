@@ -1,0 +1,11 @@
+<div class="container">
+  <center><h1>Daftar nilai</h1></center>
+  <% @nilais.each do |nilai| %>
+      <%= nilai.nilai_huruf %>
+       | <%= nilai.skala %>
+       | <%= nilai.bobot %>
+      <br>
+  <% end %>
+  <hr>
+  <%= link_to 'New Item', new_m_nilai_path, class: 'btn btn-warning' %>
+</div>

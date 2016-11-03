@@ -1,0 +1,2 @@
+module MProdisHelper
+end

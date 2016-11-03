@@ -1,0 +1,10 @@
+<div class="container">
+
+  <% @jurusans.each do |jurusan| %>
+      <h1><%= link_to jurusan.nama_jurusan, jurusan %></h1>
+      <h2><%= jurusan.singkatan %></h2>
+      <hr>
+  <% end %>
+
+  <%= link_to 'New Item', new_m_jurusan_path, class: 'btn btn-warning' %>
+</div>

@@ -1,0 +1,9 @@
+<div class="container">
+  <% @prodis.each do |prodi| %>
+      <h1><%= link_to prodi.nama_prodi, prodi %></h1>
+      <h2><%= prodi.m_jurusan_id %></h2>
+      <hr>
+  <% end %>
+
+  <%= link_to 'New Item', new_m_prodi_path, class: 'btn btn-warning' %>
+</div>

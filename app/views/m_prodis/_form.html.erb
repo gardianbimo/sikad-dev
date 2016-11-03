@@ -1,0 +1,14 @@
+<%= simple_form_for @prodi do |f| %>
+    <%= f.input :id_prodi, label: 'ID Prodi', hint: 'Masukkan 1-5' %>
+    <%= f.input :nama_prodi, label: 'Prodi' %>
+    <%= f.association :m_jurusan, label_method: :nama_jurusan, include_blank: false %>
+    <%= f.input :email_prodi, label: 'Email Prodi' %>
+    <%= f.input :telp_prodi, label: 'Telepon Prodi' %>
+    <%= f.input :situs_prodi, label: 'Situs Prodi' %>
+    <%= f.input :tanggal_berdiri, label: 'Tanggal Berdiri', as: :date, order: [:day, :month, :year] %>
+    <%= f.input :sk_berdiri, label: 'SK Berdiri' %>
+    <center>
+      <%= f.submit 'Submit', class: 'btn btn-primary'%>
+      <%= button_tag "Reset", type: :reset, class: 'btn btn-danger' %>
+    </center>
+<% end %>

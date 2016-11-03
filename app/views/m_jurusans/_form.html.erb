@@ -1,0 +1,15 @@
+
+  <%= simple_form_for @jurusan do |f| %>
+      <%= f.input :id_jurusan, label: 'ID Jurusan', hint: 'Masukkan 1-5' %>
+      <%= f.input :nama_jurusan, label: 'Jurusan' %>
+      <%= f.input :singkatan %>
+      <%= f.input :email_jurusan, label: 'Email Jurusan' %>
+      <%= f.input :telp_jurusan, label: 'Telepon Jurusan' %>
+      <%= f.input :situs_jurusan, label: 'Situs Jurusan' %>
+      <%= f.input :tanggal_berdiri, label: 'Tanggal Berdiri', as: :date, order: [:day, :month, :year] %>
+      <%= f.input :sk_berdiri, label: 'SK Berdiri' %>
+      <center>
+      <%= f.submit 'Submit', class: 'btn btn-primary'%>
+      <%= button_tag "Reset", type: :reset, class: 'btn btn-danger' %>
+      </center>
+  <% end %>

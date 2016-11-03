@@ -1,0 +1,33 @@
+<div class="col-md-10 col-md-offset-1">
+
+  <h2><%= @jurusan.nama_jurusan %></h2>
+  <hr>
+  <p>ID Jurusan : <%= @jurusan.id_jurusan %></p>
+  <br>
+  <p>Singkatan : <%= @jurusan.singkatan %></p>
+  <br>
+  <p>Email : <%= @jurusan.email_jurusan %></p>
+  <br>
+  <p>Telepon Jurusan : <%= @jurusan.telp_jurusan %></p>
+  <br>
+  <p>Situs Jurusan : <%= @jurusan.situs_jurusan %></p>
+  <br>
+  <p>Tanggal berdiri : <%= @jurusan.tanggal_berdiri.to_date.to_s %></p>
+  <br>
+  <p>SK Berdiri : <%= @jurusan.sk_berdiri %></p>
+  <br>
+  <p>Program Studi : </p>
+  <ol>
+  <% @jurusan.m_prodis.each do |prodi| %>
+    <li><%= prodi.nama_prodi %></li>
+  <% end %>
+  </ol>
+  <hr>
+  <div class="col-md-4 col-md-offset-4">
+    <center>
+    <%= link_to "Back", m_jurusans_path %>
+    <%= link_to "Edit", edit_m_jurusan_path(@jurusan) %>
+    <%= link_to "Delete", m_jurusan_path(@jurusan), method: :delete, data: {confirm: "Are you sure ?"} %>
+    </center>
+  </div>
+</div>
