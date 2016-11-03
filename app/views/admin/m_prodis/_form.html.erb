@@ -1,4 +1,4 @@
-<%= simple_form_for @prodi do |f| %>
+<%= simple_form_for [:admin, @prodi] do |f| %>
     <%= f.input :id_prodi, label: 'ID Prodi', hint: 'Masukkan 1-5' %>
     <%= f.input :nama_prodi, label: 'Prodi' %>
     <%= f.association :m_jurusan, label_method: :nama_jurusan, include_blank: false %>

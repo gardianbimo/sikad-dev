@@ -1,5 +1,5 @@
 
-<%= simple_form_for @nilai do |f| %>
+<%= simple_form_for [:admin, @nilai] do |f| %>
     <%= f.input :nilai_huruf, label: 'Nilai' %>
     <%= f.input :skala %>
     <%= f.input :bobot %>
