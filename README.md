@@ -1,2 +1,2 @@
-ruby version : 2.2
-rails version : 5
+# ruby version : 2.2
+# rails version : 5
